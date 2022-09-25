@@ -1,7 +1,7 @@
 const prompt = require('prompt-sync')({sigint: true});
 
-let val= "23618";
-//const numbers = [1, 2, 3, 4, 5, 6];
+
+
 /* let numbers=[2,3,6,1,8]
 
 function sum_reducer(accumulator, currentValue) {
