@@ -1,16 +1,52 @@
-const prompt = require('prompt-sync')({sigint: true});
 
 
-
-/* let numbers=[2,3,6,1,8]
-
-function sum_reducer(accumulator, currentValue) {
-  return accumulator + currentValue;
+    function kthDigitFromLast(n, k)
+{
+     
+    // If k is less than equal to 0
+    if (k <= 0)
+    {
+      console.log(-1);
+        return;
+    }
+    var temp = String(n);
+     
+    // If k is greater than length of the
+    // string temp
+    if (k > temp.length)
+    {
+      console.log(-1);
+    }
+     
+    // Print the k digit from last
+    else
+    {
+        var req = temp.charAt(temp.length - k)
+         
+        // Convert to number again
+        console.log(Number(req));
+    }
 }
+var n = 23617;
+var k = 4;
+ 
 
-let sum = numbers.reduce(sum_reducer);
-console.log(sum); 
-    */
+kthDigitFromLast(n, k);
+
+
+
+var a = "23618";
+let arr = [];
+for (let aa of a) {
+  arr.push(parseInt(aa));
+
+  console.log(arr);
+
+  var result = arr.reduce((prev, curr) => {
+      return prev + curr;
+  })
+  console.log(`total result=${result}`);
+
 
 const numbers = [65, 44, 12, 4];
 
@@ -56,38 +92,7 @@ console.log(first_last_1([1, 3, 5, 10]));
 console.log(first_last_1([2, 4, 6]));
 
 
-    function kthDigitFromLast(n, k)
-{
-     
-    // If k is less than equal to 0
-    if (k <= 0)
-    {
-      console.log(-1);
-        return;
-    }
-    var temp = String(n);
-     
-    // If k is greater than length of the
-    // string temp
-    if (k > temp.length)
-    {
-      console.log(-1);
-    }
-     
-    // Print the k digit from last
-    else
-    {
-        var req = temp.charAt(temp.length - k)
-         
-        // Convert to number again
-        console.log(Number(req));
-    }
-}
-var n = 23617;
-var k = 4;
- 
 
-kthDigitFromLast(n, k);
  
 
 let numStr = [2,3,6,1,7];
@@ -98,6 +103,23 @@ function getSum(total, num) {
 var my_sum = numStr.reduce(getSum, 0);
 
 console.log(my_sum)
+
+//guessgame
+
+ const ps = require('prompt-sync');
+  const prompt = ps();
+  var randomGuesser = () => {
+      var randomNumber = Math.floor((Math.random() * 10 + 1));// 1 to 10
+      console.log(randomNumber);
+      var guessNumber = prompt("Enter You guess::");// package is installed prompt-sync
+      if (guessNumber == randomNumber) {
+          console.log("You WIN");
+      }
+      else {
+          console.log("Not Matched")
+      }
+
+  }
 
 
 
